@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ✅ Todo API - Microsserviço Java para Gerenciamento de Tarefas
 
 Este é um **microsserviço RESTful** para **gerenciamento de tarefas (To-Do List)**, permitindo a **criação, listagem, atualização e exclusão de tarefas**.
@@ -34,3 +35,7 @@ Certifique-se de ter instalado:
 - [Maven 3+](https://maven.apache.org/)
 - [Docker](https://www.docker.com/) (opcional para rodar com container)
 
+=======
+# todo-api
+Microsserviço em Java para gerenciamento de tarefas (To-Do List) usando Spring Boot.
+>>>>>>> 6c5478b (Initial commit)

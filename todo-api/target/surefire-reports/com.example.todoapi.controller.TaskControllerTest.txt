@@ -1,0 +1,42 @@
+-------------------------------------------------------------------------------
+Test set: com.example.todoapi.controller.TaskControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 1.267 s <<< FAILURE! -- in com.example.todoapi.controller.TaskControllerTest
+com.example.todoapi.controller.TaskControllerTest.testCreateTask -- Time elapsed: 0.012 s <<< ERROR!
+org.mockito.exceptions.misusing.PotentialStubbingProblem: 
+
+Strict stubbing argument mismatch. Please check:
+ - this invocation of 'createTask' method:
+    taskService.createTask(null);
+    -> at com.example.todoapi.controller.TaskController.createTask(TaskController.java:62)
+ - has following stubbing(s) with different arguments:
+    1. taskService.createTask(null);
+      -> at com.example.todoapi.controller.TaskControllerTest.testCreateTask(TaskControllerTest.java:73)
+Typically, stubbing argument mismatch indicates user mistake when writing tests.
+Mockito fails early so that you can debug potential problem easily.
+However, there are legit scenarios when this exception generates false negative signal:
+  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
+    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
+  - stubbed method is intentionally invoked with different arguments by code under test
+    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
+For more information see javadoc for PotentialStubbingProblem class.
+	at com.example.todoapi.service.TaskService.createTask(TaskService.java:27)
+	at com.example.todoapi.controller.TaskController.createTask(TaskController.java:62)
+	at com.example.todoapi.controller.TaskControllerTest.testCreateTask(TaskControllerTest.java:79)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+com.example.todoapi.controller.TaskControllerTest.testUpdateTask_Success -- Time elapsed: 0.011 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <200 OK> but was: <404 NOT_FOUND>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.example.todoapi.controller.TaskControllerTest.testUpdateTask_Success(TaskControllerTest.java:99)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

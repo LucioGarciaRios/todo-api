@@ -1,0 +1,3 @@
+com\example\todoapi\TodoApiApplicationTests.class
+com\example\todoapi\controller\TaskControllerTest.class
+com\example\todoapi\service\TaskServiceTest.class

@@ -1,0 +1,7 @@
+com\example\todoapi\service\TaskService.class
+com\example\todoapi\dto\TaskDTO.class
+com\example\todoapi\controller\TaskController.class
+com\example\todoapi\TodoApiApplication.class
+com\example\todoapi\repository\TaskRepository.class
+com\example\todoapi\model\Task.class
+com\example\todoapi\mapper\TaskMapper.class
