@@ -25,7 +25,7 @@ jobs:
           java-version: '21'
 
       - name: Build with Maven
-        run: mvn -f ./crud/pom.xml -B package -DskipTests
+        run: mvn -f ./todo-api/pom.xml -B package -DskipTests
 
   test:
     runs-on: ubuntu-latest
@@ -41,4 +41,4 @@ jobs:
           java-version: '21'
 
       - name: Test with Maven
-        run: mvn -f ./crud/pom.xml test
+        run: mvn -f ./todo-api/pom.xml test
