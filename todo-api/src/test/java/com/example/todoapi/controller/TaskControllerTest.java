@@ -45,7 +45,7 @@ public class TaskControllerTest {
 
     @BeforeEach
     void setup() {
-        objectMapper.registerModule(new JavaTimeModule()); // Permite serializar LocalDateTime
+        objectMapper.registerModule(new JavaTimeModule());
         mockMvc = MockMvcBuilders.standaloneSetup(taskController).build();
     }
 

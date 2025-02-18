@@ -25,9 +25,7 @@ public class TaskServiceTest {
 
     @BeforeEach
     public void setUp() {
-        // Inicializa os mocks do Mockito
         MockitoAnnotations.openMocks(this);
-        // Cria uma instância de Task para uso nos testes
         task = new Task();
         task.setId(1L);
         task.setTitle("Teste Task");
@@ -38,19 +36,15 @@ public class TaskServiceTest {
 
     @Test
     public void testFindAllTasks() {
-        // Simula o retorno do repositório com uma lista contendo uma task
         List<Task> tasks = Arrays.asList(task);
         when(taskRepository.findAll()).thenReturn(tasks);
-        // Executa o método de listagem
         List<Task> result = taskService.findAllTasks();
-        // Verifica se o tamanho da lista é 1 e se o repositório foi chamado uma vez
         assertEquals(1, result.size());
         verify(taskRepository, times(1)).findAll();
     }
 
     @Test
     public void testFindTaskById() {
-        // Simula o retorno da task para o id 1
         when(taskRepository.findById(1L)).thenReturn(Optional.of(task));
         Optional<Task> result = taskService.findTaskById(1L);
         assertTrue(result.isPresent());
@@ -60,7 +54,6 @@ public class TaskServiceTest {
 
     @Test
     public void testCreateTask() {
-        // Simula o salvamento de uma task
         when(taskRepository.save(any(Task.class))).thenReturn(task);
         Task created = taskService.createTask(task);
         assertNotNull(created);
@@ -70,13 +63,11 @@ public class TaskServiceTest {
 
     @Test
     public void testUpdateTask() {
-        // Cria uma task atualizada com novos dados
         Task updatedTask = new Task();
         updatedTask.setTitle("Task Atualizada");
         updatedTask.setDescription("Descrição atualizada");
         updatedTask.setStatus("completa");
 
-        // Simula que a task original é encontrada e, em seguida, salva a task atualizada
         when(taskRepository.findById(1L)).thenReturn(Optional.of(task));
         when(taskRepository.save(any(Task.class))).thenReturn(updatedTask);
 
@@ -89,13 +80,11 @@ public class TaskServiceTest {
 
     @Test
     public void testUpdateTaskNotFound() {
-        // Cria uma task com dados para atualização
         Task updatedTask = new Task();
         updatedTask.setTitle("Task Atualizada");
         updatedTask.setDescription("Descrição atualizada");
         updatedTask.setStatus("completa");
 
-        // Simula que nenhuma task foi encontrada para o id informado
         when(taskRepository.findById(1L)).thenReturn(Optional.empty());
         Exception exception = assertThrows(RuntimeException.class, () -> {
             taskService.updateTask(1L, updatedTask);
@@ -106,7 +95,6 @@ public class TaskServiceTest {
 
     @Test
     public void testDeleteTask() {
-        // Simula a exclusão da task
         doNothing().when(taskRepository).deleteById(1L);
         taskService.deleteTask(1L);
         verify(taskRepository, times(1)).deleteById(1L);

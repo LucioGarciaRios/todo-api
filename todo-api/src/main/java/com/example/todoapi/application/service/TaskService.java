@@ -23,7 +23,6 @@ public class TaskService {
     }
 
     public Task createTask(Task task) {
-        // Caso a data de criação não seja setada (ex.: via JSON), define como agora.
         if (task.getCreationDate() == null) {
             task.setCreationDate(java.time.LocalDateTime.now());
         }
@@ -35,7 +34,6 @@ public class TaskService {
             task.setTitle(newTaskData.getTitle());
             task.setDescription(newTaskData.getDescription());
             task.setStatus(newTaskData.getStatus());
-            // A data de criação permanece a mesma
             return taskRepository.save(task);
         }).orElseThrow(() -> new RuntimeException("Tarefa não encontrada com id " + id));
     }
