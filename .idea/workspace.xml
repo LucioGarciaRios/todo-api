@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d9cd42d-9f41-42f3-a16f-bde7d703eb5f" name="Changes" comment="" />
+    <list default="true" id="4d9cd42d-9f41-42f3-a16f-bde7d703eb5f" name="Changes" comment="fix project structure">
+      <change afterPath="$PROJECT_DIR$/postman/ToDo.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/workflow.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/workflow.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todoapi/application/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todoapi/application/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todoapi/domain/repository/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todoapi/domain/repository/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todoapi/presentation/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todoapi/presentation/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/todoapi/presentation/dto/CreateTaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/todoapi/presentation/dto/CreateTaskDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_tasks_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_tasks_table.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +29,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LucioGarciaRios&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LucioGarciaRios/todo-api.git&quot;,
+    &quot;accountId&quot;: &quot;acea9f55-5433-43a2-9982-c122ccdd0131&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -25,9 +51,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2tB7C4o6MZl0AwPDyHKRCVyIwZC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,7 +62,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Maven.todo-api [clean].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "Spring Boot.TodoApiApplication.executor": "Debug",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -46,8 +80,19 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lgrios1\Downloads\todo-api\postman" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="TodoApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="DB_PWD" value="Senha@12345" />
+        <env name="DB_URL" value="jdbc:sqlserver://localhost:1433;databaseName=master;encrypt=false" />
+        <env name="DB_USR" value="sa" />
+        <env name="LOG-LEVEL" value="DEBUG" />
+      </envs>
       <module name="todo-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.todoapi.TodoApiApplication" />
       <method v="2">
@@ -72,10 +117,26 @@
       <option name="presentableId" value="Default" />
       <updated>1739813482725</updated>
       <workItem from="1739813483959" duration="2234000" />
+      <workItem from="1739929086945" duration="1035000" />
+      <workItem from="1739965212343" duration="2383000" />
+      <workItem from="1739967634478" duration="3905000" />
     </task>
+    <task id="LOCAL-00001" summary="fix project structure">
+      <option name="closed" value="true" />
+      <created>1739929171564</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739929171564</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix project structure" />
   </component>
 </project>

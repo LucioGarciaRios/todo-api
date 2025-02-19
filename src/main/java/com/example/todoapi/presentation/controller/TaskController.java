@@ -29,69 +29,94 @@ public class TaskController {
 
     @Operation(
             summary = "Listar todas as tarefas",
-            description = "Retorna uma lista contendo todas as tarefas cadastradas no sistema."
+            description = "Retorna uma lista de tarefas. Se o parâmetro 'status' for fornecido, filtra as tarefas pelo status."
     )
     @GetMapping
-    public List<TaskDTO> getAllTasks() {
-        List<Task> tasks = taskService.findAllTasks();
-        return tasks.stream()
+    public ResponseEntity<?> getAllTasks(@RequestParam(value = "status", required = false) String status) {
+        List<Task> tasks;
+        if (status != null && !status.isEmpty()) {
+            tasks = taskService.findTasksByStatus(status);
+            if (tasks.isEmpty()) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body("Nenhuma tarefa encontrada com o status: " + status);
+            }
+        } else {
+            tasks = taskService.findAllTasks();
+            if (tasks.isEmpty()) {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                        .body("Nenhuma tarefa encontrada.");
+            }
+        }
+        List<TaskDTO> taskDtos = tasks.stream()
                 .map(taskMapper::toDTO)
                 .collect(Collectors.toList());
+        return ResponseEntity.ok(taskDtos);
     }
 
     @Operation(
             summary = "Obter uma tarefa por ID",
-            description = "Busca uma tarefa específica pelo seu ID. Retorna 404 se a tarefa não for encontrada."
+            description = "Retorna a tarefa correspondente ao ID informado."
     )
     @GetMapping("/{id}")
     public ResponseEntity<TaskDTO> getTaskById(
-            @Parameter(description = "ID da tarefa a ser buscada", example = "1")
             @PathVariable Long id) {
         return taskService.findTaskById(id)
                 .map(task -> ResponseEntity.ok(taskMapper.toDTO(task)))
                 .orElse(ResponseEntity.notFound().build());
     }
 
+
+
     @Operation(
             summary = "Criar uma nova tarefa",
             description = "Cria uma nova tarefa no sistema e retorna a tarefa criada."
     )
     @PostMapping
-    public ResponseEntity<TaskDTO> createTask(
-            @RequestBody CreateTaskDto createTaskDto) {
-        Task task = taskMapper.toEntity(createTaskDto);
-        Task createdTask = taskService.createTask(task);
-        return ResponseEntity.status(HttpStatus.CREATED).body(taskMapper.toDTO(createdTask));
+    public ResponseEntity<?> createTask(@RequestBody CreateTaskDto createTaskDto) {
+        try {
+            Task task = taskMapper.toEntity(createTaskDto);
+            Task createdTask = taskService.createTask(task);
+            return ResponseEntity.status(HttpStatus.CREATED)
+                    .body(taskMapper.toDTO(createdTask));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body("Erro ao criar a tarefa.");
+        }
     }
 
     @Operation(
-            summary = "Atualizar uma tarefa existente",
-            description = "Atualiza os dados de uma tarefa com base no ID informado. Retorna 404 se a tarefa não for encontrada."
+            summary = "Atualizar uma tarefa",
+            description = "Atualiza a tarefa com base no ID informado."
     )
     @PutMapping("/{id}")
-    public ResponseEntity<TaskDTO> updateTask(
+    public ResponseEntity<?> updateTask(
             @Parameter(description = "ID da tarefa a ser atualizada", example = "1")
             @PathVariable Long id,
-
             @RequestBody TaskDTO taskDTO) {
         try {
             Task task = taskMapper.toEntity(taskDTO);
             Task updatedTask = taskService.updateTask(id, task);
             return ResponseEntity.ok(taskMapper.toDTO(updatedTask));
         } catch (RuntimeException e) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("Tarefa com ID " + id + " não encontrada para atualização.");
         }
     }
 
     @Operation(
             summary = "Excluir uma tarefa",
-            description = "Remove uma tarefa com base no ID informado. Retorna 204 se a exclusão for bem-sucedida."
+            description = "Exclui a tarefa com base no ID informado."
     )
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTask(
+    public ResponseEntity<?> deleteTask(
             @Parameter(description = "ID da tarefa a ser excluída", example = "1")
             @PathVariable Long id) {
-        taskService.deleteTask(id);
-        return ResponseEntity.noContent().build();
+        try {
+            taskService.deleteTask(id);
+            return ResponseEntity.noContent().build();
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("Tarefa com ID " + id + " não encontrada para exclusão.");
+        }
     }
 }

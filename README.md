@@ -24,53 +24,37 @@ Esta é uma API RESTful para gerenciamento de tarefas (To-Do List). Ela permite 
    ```sh
    cd todo-api
    ```
-3. Compile o projeto:
+3. Comando para criar um container do SqlServer no docker
+   ```sh
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Senha@12345" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+   ```
+4. Compile o projeto:
    ```sh
    mvn clean install
    ```
-4. Execute a API:
+5. Execute a API:
    ```sh
    mvn spring-boot:run
    ```
+6. A API estará disponível em `http://localhost:8080`.
 
-A API estará disponível em `http://localhost:8080`.
+## Variaveis de ambiente
 
-## Endpoints
+Você precisará preencher as seguintes variaveis de ambiente:
 
-### Criar uma Tarefa
-📌 **POST** `http://localhost:8080/tasks`
-```json
-{
-  "title": "Nova Tarefa",
-  "description": "Descricao da tarefa",
-  "status": "PENDING"
-}
-```
+   ${DB_URL} - jdbc:sqlserver://localhost:1433;databaseName=master;encrypt=false
+   ${DB_USR} - sa
+   ${DB_PWD} - Senha@12345
+   ${LOG-LEVEL} - DEBUG
 
-### Listar Todas as Tarefas
-📌 **GET** `http://localhost:8080/tasks`
-
-### Buscar Tarefa por ID
-📌 **GET** `http://localhost:8080/tasks/{id}`
-
-### Atualizar uma Tarefa
-📌 **PUT** `http://localhost:8080/tasks/{id}`
-```json
-{
-  "title": "Tarefa Atualizada",
-  "description": "Nova descricao",
-  "status": "COMPLETED"
-}
-```
-
-### Deletar uma Tarefa
-📌 **DELETE** `http://localhost:8080/tasks/{id}`
 
 ## Documentação da API
 
 A API conta com documentação interativa via Swagger. Após iniciar o projeto, acesse:
 
 🌐 `http://localhost:8080/swagger-ui.html`
+
+O postman do projéto está disponível na raiz do projeto no diretório: postman
 
 ## Autor
 
