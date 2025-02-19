@@ -1,7 +1,7 @@
 CREATE TABLE tasks (
-                       id BIGINT AUTO_INCREMENT PRIMARY KEY,
-                       title VARCHAR(255) NOT NULL,
-                       description VARCHAR(1024),
-                       creation_date TIMESTAMP NOT NULL,
-                       status VARCHAR(50) NOT NULL
+                       id INT PRIMARY KEY IDENTITY(1,1),
+                       title NVARCHAR(255) NOT NULL,
+                       description NVARCHAR(500),
+                       created_at DATETIME DEFAULT GETDATE(),
+                       status NVARCHAR(50) CHECK (status IN ('pendente', 'em andamento', 'concluída'))
 );
