@@ -4,41 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="014cfbe5-40bc-4cf1-8e56-2c4618ee169e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/src/main/java/com/example/todoapi/application/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/src/main/java/com/example/todoapi/application/service/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/src/main/java/com/example/todoapi/domain/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/src/main/java/com/example/todoapi/domain/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/src/main/java/com/example/todoapi/infrastructure/mapper/TaskMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/src/main/java/com/example/todoapi/infrastructure/mapper/TaskMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/src/main/java/com/example/todoapi/presentation/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/src/main/java/com/example/todoapi/presentation/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/src/main/java/com/example/todoapi/presentation/dto/TaskDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/src/main/java/com/example/todoapi/presentation/dto/TaskDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/src/main/resources/db/migration/V1__create_tasks_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/src/main/resources/db/migration/V1__create_tasks_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/TodoApiApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/TodoApiApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/application/service/TaskService.class" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/application/service/TaskService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/domain/model/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/domain/model/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/domain/repository/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/domain/repository/TaskRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/infrastructure/mapper/TaskMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/infrastructure/mapper/TaskMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/presentation/controller/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/presentation/controller/TaskController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/presentation/dto/TaskDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/target/classes/com/example/todoapi/presentation/dto/TaskDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/classes/db/migration/V1__create_tasks_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/todo-api/target/classes/db/migration/V1__create_tasks_table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/surefire-reports/TEST-com.example.todoapi.TodoApiApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/surefire-reports/TEST-com.example.todoapi.controller.TaskControllerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/surefire-reports/TEST-com.example.todoapi.service.TaskServiceTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/surefire-reports/com.example.todoapi.TodoApiApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/surefire-reports/com.example.todoapi.controller.TaskControllerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/surefire-reports/com.example.todoapi.service.TaskServiceTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/test-classes/com/example/todoapi/TodoApiApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/test-classes/com/example/todoapi/controller/TaskControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-api/target/test-classes/com/example/todoapi/service/TaskServiceTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="4d9cd42d-9f41-42f3-a16f-bde7d703eb5f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,156 +13,47 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2tBOYpYzIYQvpYZV3V7eLKi57E3" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2tB7C4o6MZl0AwPDyHKRCVyIwZC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.TaskControllerTest.executor": "Run",
-    "JUnit.TaskServiceTest.executor": "Run",
-    "JUnit.TodoApiApplicationTests.executor": "Run",
-    "JUnit.java in todo-api.executor": "Run",
-    "Maven.todo-api [clean,package].executor": "Run",
     "Maven.todo-api [clean].executor": "Run",
-    "Maven.todo-api [compile].executor": "Run",
-    "Maven.todo-api [install].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.TodoApiApplication.executor": "Debug",
-    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver"
-    ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\lgrios1\Downloads\todo-api\todo-api\src\main\resources\db\migration" />
-      <recent name="C:\Users\lgrios1\Downloads\todo-api\todo-api\src\main" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.todoapi" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn clean package" />
-      <command value="mvn clean" />
-    </option>
-  </component>
-  <component name="RunManager" selected="Spring Boot.TodoApiApplication">
-    <configuration name="TaskControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.todoapi.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.todoapi.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todoapi.controller.TaskControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.todoapi.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.todoapi.service" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todoapi.service.TaskServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TodoApiApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.todoapi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.todoapi" />
-      <option name="MAIN_CLASS_NAME" value="com.example.todoapi.TodoApiApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="java in todo-api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="todo-api" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/todo-api/src/test/java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="TodoApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="corretto-21" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <envs>
-        <env name="DB_PWD" value="Senha@12345" />
-        <env name="DB_USR" value="sa" />
-        <env name="DB_URL" value="jdbc:sqlserver://localhost:1433;databaseName=master;encrypt=false" />
-        <env name="LOG-LEVEL" value="DEBUG" />
-      </envs>
       <module name="todo-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.todoapi.TodoApiApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.TodoApiApplicationTests" />
-      <item itemvalue="JUnit.java in todo-api" />
-      <item itemvalue="JUnit.TaskControllerTest" />
-      <item itemvalue="JUnit.TaskServiceTest" />
-      <item itemvalue="Spring Boot.TodoApiApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.java in todo-api" />
-        <item itemvalue="JUnit.TodoApiApplicationTests" />
-        <item itemvalue="JUnit.TaskServiceTest" />
-        <item itemvalue="JUnit.TaskControllerTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -209,19 +66,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="014cfbe5-40bc-4cf1-8e56-2c4618ee169e" name="Changes" comment="" />
-      <created>1739822058435</created>
+      <changelist id="4d9cd42d-9f41-42f3-a16f-bde7d703eb5f" name="Changes" comment="" />
+      <created>1739813482725</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1739822058435</updated>
-      <workItem from="1739822060672" duration="14597000" />
-      <workItem from="1739883902900" duration="1180000" />
-      <workItem from="1739885102798" duration="11238000" />
-      <workItem from="1739910072556" duration="3815000" />
-      <workItem from="1739914484857" duration="2135000" />
-      <workItem from="1739916698696" duration="1599000" />
-      <workItem from="1739918312249" duration="6320000" />
-      <workItem from="1739926416135" duration="1776000" />
+      <updated>1739813482725</updated>
+      <workItem from="1739813483959" duration="2234000" />
     </task>
     <servers />
   </component>
