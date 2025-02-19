@@ -23,9 +23,9 @@ public class TaskService {
     }
 
     public Task createTask(Task task) {
-        if (task.getCreationDate() == null) {
-            task.setCreationDate(java.time.LocalDateTime.now());
-        }
+
+        task.setCreatedAt(java.time.LocalDateTime.now());
+
         return taskRepository.save(task);
     }
 

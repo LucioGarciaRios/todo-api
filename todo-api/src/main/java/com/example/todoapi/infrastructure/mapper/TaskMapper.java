@@ -1,5 +1,6 @@
 package com.example.todoapi.infrastructure.mapper;
 
+import com.example.todoapi.presentation.dto.CreateTaskDto;
 import com.example.todoapi.presentation.dto.TaskDTO;
 import com.example.todoapi.domain.model.Task;
 import org.springframework.stereotype.Component;
@@ -15,7 +16,7 @@ public class TaskMapper {
                 task.getId(),
                 task.getTitle(),
                 task.getDescription(),
-                task.getCreationDate(),
+                task.getCreatedAt(),
                 task.getStatus()
         );
     }
@@ -24,12 +25,26 @@ public class TaskMapper {
         if (dto == null) {
             return null;
         }
-        Task task = new Task();
-        task.setId(dto.getId());
-        task.setTitle(dto.getTitle());
-        task.setDescription(dto.getDescription());
-        task.setCreationDate(dto.getCreationDate());
-        task.setStatus(dto.getStatus());
-        return task;
+
+        return Task.builder()
+                .title(dto.getTitle())
+                .description(dto.getDescription())
+                .status(dto.getStatus())
+                .createdAt(dto.getCreatedAt())
+                .id(dto.getId())
+                .build();
+    }
+
+    public Task toEntity(CreateTaskDto dto) {
+        if (dto == null) {
+            return null;
+        }
+
+        return Task.builder()
+                .title(dto.getTitle())
+                .description(dto.getDescription())
+                .status(dto.getStatus())
+                .build();
+
     }
 }

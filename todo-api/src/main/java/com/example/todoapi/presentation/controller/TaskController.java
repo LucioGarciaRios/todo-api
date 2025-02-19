@@ -1,5 +1,6 @@
 package com.example.todoapi.presentation.controller;
 
+import com.example.todoapi.presentation.dto.CreateTaskDto;
 import com.example.todoapi.presentation.dto.TaskDTO;
 import com.example.todoapi.infrastructure.mapper.TaskMapper;
 import com.example.todoapi.domain.model.Task;
@@ -16,7 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/tasks")
+@RequestMapping("/api/tasks")
 @Tag(name = "Task API", description = "Endpoints para gerenciamento de tarefas")
 public class TaskController {
 
@@ -57,8 +58,8 @@ public class TaskController {
     )
     @PostMapping
     public ResponseEntity<TaskDTO> createTask(
-            @RequestBody TaskDTO taskDTO) {
-        Task task = taskMapper.toEntity(taskDTO);
+            @RequestBody CreateTaskDto createTaskDto) {
+        Task task = taskMapper.toEntity(createTaskDto);
         Task createdTask = taskService.createTask(task);
         return ResponseEntity.status(HttpStatus.CREATED).body(taskMapper.toDTO(createdTask));
     }

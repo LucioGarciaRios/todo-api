@@ -1,48 +1,78 @@
-# ✅ Todo API - Microsserviço Java para Gerenciamento de Tarefas
+# Todo API
 
-Este é um microsserviço desenvolvido em **Java** com as seguintes tecnologias:
+## Descrição
 
-| Framework/Biblioteca | Versão   | Link                                        |
-|----------------------|----------|---------------------------------------------|
-| Java                | 21        |                                             |
-| Spring Boot         | 3.4.2     | [Spring Boot](https://spring.io/projects/spring-boot) |
-| Spring Data JPA     | 3.4.2     | [Spring Data JPA](https://spring.io/projects/spring-data-jpa) |
-| Lombok              | 1.18.34   | [Lombok](https://projectlombok.org/) |
-| Flyway              | 9.0.0     | [Flyway](https://flywaydb.org/) |
-| H2 Database        | 2.1.214   | [H2 Database](https://www.h2database.com/) |
-| Swagger/OpenAPI     | 2.3.0     | [Springdoc OpenAPI](https://springdoc.org/) |
+Esta é uma API RESTful para gerenciamento de tarefas (To-Do List). Ela permite criar, listar, atualizar e deletar tarefas.
 
----
+## Tecnologias Utilizadas
 
-## 📌 Visão Geral
+- **Java 21**
+- **Spring Boot**
+- **Spring Data JPA**
+- **Hibernate**
+- **Flyway**
+- **Microsoft SQL Server**
+- **Swagger/OpenAPI** (para documentação da API)
 
-Microsserviço para **gerenciamento de tarefas (To-Do List)**, permitindo a criação, listagem, atualização e exclusão de tarefas.
+## Como Rodar o Projeto
 
----
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/LucioGarciaRios/todo-api.git
+   ```
+2. Acesse a pasta do projeto:
+   ```sh
+   cd todo-api
+   ```
+3. Compile o projeto:
+   ```sh
+   mvn clean install
+   ```
+4. Execute a API:
+   ```sh
+   mvn spring-boot:run
+   ```
 
-[//]: # (## 🚀 Como Construir e Executar Localmente com **Maven**)
+A API estará disponível em `http://localhost:8080`.
 
-[//]: # (```sh)
+## Endpoints
 
-[//]: # (./mvnw clean package)
+### Criar uma Tarefa
+📌 **POST** `http://localhost:8080/tasks`
+```json
+{
+  "title": "Nova Tarefa",
+  "description": "Descricao da tarefa",
+  "status": "PENDING"
+}
+```
 
-[//]: # (./mvnw spring-boot:run)
+### Listar Todas as Tarefas
+📌 **GET** `http://localhost:8080/tasks`
 
+### Buscar Tarefa por ID
+📌 **GET** `http://localhost:8080/tasks/{id}`
 
-# 🐳 Como Construir e Executar Localmente com Docker
+### Atualizar uma Tarefa
+📌 **PUT** `http://localhost:8080/tasks/{id}`
+```json
+{
+  "title": "Tarefa Atualizada",
+  "description": "Nova descricao",
+  "status": "COMPLETED"
+}
+```
 
-1️⃣ Compilar e empacotar o código Java:
-./mvnw -Pdev -Dspring-boot.run.profiles=dev clean package
+### Deletar uma Tarefa
+📌 **DELETE** `http://localhost:8080/tasks/{id}`
 
-2️⃣ Construir a imagem Docker:
-docker build -t todo-api . -f Dockerfile
+## Documentação da API
 
-3️⃣ Executar a imagem recém-criada:
-docker run --rm -p 8080:8080 todo-api
+A API conta com documentação interativa via Swagger. Após iniciar o projeto, acesse:
 
+🌐 `http://localhost:8080/swagger-ui.html`
 
-# 📖 Para visualizar a documentação da API
+## Autor
 
-Swagger UI
-🔗 http://localhost:8080/swagger-ui.htm
+👨‍💻 Desenvolvido por **Lúcio Garcia**.
 
